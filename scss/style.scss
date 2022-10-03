@@ -1,0 +1,225 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+        body{
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-color: #b5838d;
+        }
+    
+        .carousel-inner{
+            border-radius: 20px;
+        }
+        .divlogo{
+            display: flex;
+            justify-content:center ;
+        }
+    
+        .imglogo{
+            width:150px;
+            height:150px;
+            border-radius:50%;
+            margin: 25px;
+        }
+    
+        .navbar-nav {
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            opacity: 70%;
+        }
+    
+        .bloquenav{
+            margin: 10px;
+            border-radius: 5px;
+            background-image:url(../img/Fondo-Web-3.png);
+    
+        }
+        .titulospag{
+            margin: 40px;
+            text-align: center;
+            font-style: italic;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            opacity: 70%;
+        }
+    
+        .bloquemain{
+            margin: 10px;
+            border-radius: 5px;
+            background-image:url(../img/Fondo-Web-3.png);
+    
+        }
+    
+        .div8{
+            opacity: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .div4{
+            text-align: center;
+            opacity: 75%;
+        }
+    
+        .acido{
+            width: 300px;
+            background-size:cover;
+            background-position: center;
+            height: 300px;
+            margin:20px;    
+            border-style:inset;
+            animation-duration: 8s;
+            animation-name: aparecer;
+            animation-iteration-count: infinite;
+        }
+            @keyframes aparecer {
+                0% {
+                opacity: 0;
+                }
+                100% {
+                opacity: 5;
+                }
+            }
+    
+        .parrafoindex{
+            font-size: 20px;
+            font-style: italic;
+            text-align: center;
+        }
+    
+        body{
+            font-family:  'Quicksand', sans-serif;
+        }
+    
+        .bloquefooter{
+            background-image:url(../img/Fondo-Web-3.png);
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .footer1{
+            text-align: center;
+            justify-content: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+    
+        .bi-instagram{
+            width: 35px;
+            height: 35px;
+            color: rgb(185, 121, 171);
+            margin-right: 20px;
+        }
+    
+        .bi-facebook{
+            width: 35px;
+            height: 35px;
+            color: rgb(185, 121, 171);
+        }
+    
+        .redes{
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            margin-top: 30px;
+        }
+    
+        h1{
+            text-align: center;
+            margin: 20px;
+            font-size: 40px;
+            font-style: italic;
+        }
+    
+        p{
+        font-size: 20px;
+        }
+    
+        .videoinfo{ 
+            text-align: center;
+        }
+    
+        .formularioContacto{
+            margin: 10%;
+            margin-bottom: 20%;
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+        }
+    
+        .divpuntosatencion{
+            text-align: center;
+            margin: 100px;
+            text-decoration: underline;
+        }
+    
+        .imgmaps{
+            margin: 40px;
+            border-style: inset;
+        }
+    
+        .divcalendario{
+            margin: 100px;
+            text-align: center;
+        }
+    
+        .divhorarios{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .videoinfo{
+            margin: 20px;
+            height: 85vh;
+        }
+    
+        .container{
+            font-size: 25px;
+            justify-content: end;
+        }
+    
+        .slide{
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    
+        .slide img{
+            height: 65vh;
+        }
+    
+    @media screen and (min-width: 768px) {
+        .div8{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            align-items: center;
+            justify-items: center;
+        }
+        .slide{
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        .slide img{
+            height: 80vh;
+        }
+    }
+    
+    @media screen and (min-width:1024px){
+        .div8{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+        
+        .slide{
+            margin-top: 20px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .slide img{
+            height: 90vh;
+        }
+    }
