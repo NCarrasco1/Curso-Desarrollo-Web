@@ -1,16 +1,20 @@
+$colors-redes: rgb(185, 121, 171);
 *{margin: 0;
     padding: 0;
     box-sizing: border-box;
     }
+/* Sección body*/
         body{
             display: flex;
             flex-direction: column;
             background-size: cover;
             background-color: #b5838d;
+            font-family:  'Quicksand', sans-serif;
         }
-    
-        .carousel-inner{
-            border-radius: 20px;
+/* Sección logo y barra navegacion */
+        .breadcrumb{
+        background-color:rgba(119, 91, 119, 0.24);
+        text-decoration: none;
         }
         .divlogo{
             display: flex;
@@ -23,19 +27,31 @@
             border-radius:50%;
             margin: 25px;
         }
-    
         .navbar-nav {
             font-size: 30px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             opacity: 70%;
         }
-    
+
         .bloquenav{
             margin: 10px;
             border-radius: 5px;
             background-image:url(../img/Fondo-Web-3.png);
-    
         }
+/* Seccion Informacion del sitio */
+        h1{
+            text-align: center;
+            margin: 20px;
+            font-size: 40px;
+            font-style: italic;
+        }
+
+        .bloquemain{
+            margin: 10px;
+            border-radius: 5px;
+            background-image:url(../img/Fondo-Web-3.png);
+        }
+
         .titulospag{
             margin: 40px;
             text-align: center;
@@ -43,22 +59,14 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             opacity: 70%;
         }
-    
-        .bloquemain{
-            margin: 10px;
-            border-radius: 5px;
-            background-image:url(../img/Fondo-Web-3.png);
-    
+
+        .parrafoindex{
+            font-size: 20px;
+            font-style: italic;
+            text-align: center;
         }
-    
-        .div8{
-            opacity: 70%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    
-        .div4{
+
+        .imginfo{
             text-align: center;
             opacity: 75%;
         }
@@ -82,17 +90,62 @@
                 opacity: 5;
                 }
             }
-    
-        .parrafoindex{
+        .carousel-inner{
+            border-radius: 20px;
+            }
+        .parrafohorarios{
             font-size: 20px;
-            font-style: italic;
+                }
+        .formularioContacto{
+            margin: 10%;
+            margin-bottom: 20%;
             text-align: center;
-        }
-    
-        body{
-            font-family:  'Quicksand', sans-serif;
-        }
-    
+            font-style: italic;
+            font-weight: bold;
+                }
+        .divpuntosatencion{
+            text-align: center;
+            margin: 100px;
+            text-decoration: underline;
+                }
+                .imgmaps{
+                    margin: 40px;
+                    border-style: inset;
+                }
+            
+                .divcalendario{
+                    margin: 100px;
+                    text-align: center;
+                }
+            
+                .divhorarios{
+                    text-align: center;
+                    margin-top: 50px;
+                }
+                .videoinfo{
+                    margin: 20px;
+                    height: 85vh;
+                }
+            
+                .container{
+                    font-size: 25px;
+                    justify-content: end;
+                }
+            
+                .slide{
+                    margin-top: 10px;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            
+                .slide img{
+                    height: 65vh;
+                }       
+                .mapsgoogle{
+                    text-align: center;
+                    margin: 50px;
+                }
+/* Seccion footer */
         .bloquefooter{
             background-image:url(../img/Fondo-Web-3.png);
             margin: 10px;
@@ -109,86 +162,23 @@
         .bi-instagram{
             width: 35px;
             height: 35px;
-            color: rgb(185, 121, 171);
+            color: $colors-redes;
             margin-right: 20px;
         }
     
         .bi-facebook{
             width: 35px;
             height: 35px;
-            color: rgb(185, 121, 171);
+            color: $colors-redes;
         }
     
         .redes{
             text-decoration: none;
-            color: black;
             font-size: 25px;
             margin-top: 30px;
         }
-    
-        h1{
-            text-align: center;
-            margin: 20px;
-            font-size: 40px;
-            font-style: italic;
-        }
-    
-        p{
-        font-size: 20px;
-        }
-    
-        .videoinfo{ 
-            text-align: center;
-        }
-    
-        .formularioContacto{
-            margin: 10%;
-            margin-bottom: 20%;
-            text-align: center;
-            font-style: italic;
-            font-weight: bold;
-        }
-    
-        .divpuntosatencion{
-            text-align: center;
-            margin: 100px;
-            text-decoration: underline;
-        }
-    
-        .imgmaps{
-            margin: 40px;
-            border-style: inset;
-        }
-    
-        .divcalendario{
-            margin: 100px;
-            text-align: center;
-        }
-    
-        .divhorarios{
-            text-align: center;
-            margin-top: 50px;
-        }
-        .videoinfo{
-            margin: 20px;
-            height: 85vh;
-        }
-    
-        .container{
-            font-size: 25px;
-            justify-content: end;
-        }
-    
-        .slide{
-            margin-top: 10px;
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-    
-        .slide img{
-            height: 65vh;
-        }
-    
+/* Seccion Media */
+
     @media screen and (min-width: 768px) {
         .div8{
             display: grid;
