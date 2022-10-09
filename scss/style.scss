@@ -1,15 +1,15 @@
-$colors-redes: rgb(185, 121, 171);
+$colors-redes: rgb(7, 7, 7); 
 *{margin: 0;
     padding: 0;
     box-sizing: border-box;
     }
 /* Sección body*/
         body{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             display: flex;
             flex-direction: column;
             background-size: cover;
             background-color: #b5838d;
-            font-family:  'Quicksand', sans-serif;
         }
 /* Sección logo y barra navegacion */
         .breadcrumb{
@@ -22,10 +22,11 @@ $colors-redes: rgb(185, 121, 171);
         }
     
         .imglogo{
-            width:150px;
-            height:150px;
+            width: 300px;
+            height:300px;
             border-radius:50%;
             margin: 25px;
+            opacity: 60%;
         }
         .navbar-nav {
             font-size: 30px;
@@ -42,8 +43,14 @@ $colors-redes: rgb(185, 121, 171);
         h1{
             text-align: center;
             margin: 20px;
+            margin-bottom: 30px;
             font-size: 40px;
             font-style: italic;
+            opacity: 60%;
+        }
+        h3{
+            text-align: center;
+            opacity: 70%;
         }
 
         .bloquemain{
@@ -57,10 +64,11 @@ $colors-redes: rgb(185, 121, 171);
             text-align: center;
             font-style: italic;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            opacity: 70%;
+            opacity: 50%;
         }
 
         .parrafoindex{
+            opacity: 70%;
             font-size: 20px;
             font-style: italic;
             text-align: center;
@@ -165,6 +173,9 @@ $colors-redes: rgb(185, 121, 171);
             color: $colors-redes;
             margin-right: 20px;
         }
+        .inst{
+            text-decoration: none;
+        }
     
         .bi-facebook{
             width: 35px;
@@ -176,6 +187,12 @@ $colors-redes: rgb(185, 121, 171);
             text-decoration: none;
             font-size: 25px;
             margin-top: 30px;
+            opacity: 70%;
+        }
+        .textredes{
+            text-align: center;
+            margin-top: 90px;
+            text-decoration: none;
         }
 /* Seccion Media */
 
