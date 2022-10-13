@@ -1,4 +1,5 @@
 $colors-redes: rgb(7, 7, 7); 
+$navbar-light-hover-color: red;
 *{margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,6 +40,13 @@ $colors-redes: rgb(7, 7, 7);
             border-radius: 5px;
             background-image:url(../img/Fondo-Web-3.png);
         }
+        .nav-item{
+            height: 100px;
+            transition: height 10s;
+            div:hover {
+                height: 200px;
+            }
+        }
 /* Seccion Informacion del sitio */
         h1{
             text-align: center;
@@ -47,6 +55,9 @@ $colors-redes: rgb(7, 7, 7);
             font-size: 40px;
             font-style: italic;
             opacity: 60%;
+        }
+        h2{
+            font-size: 20px;
         }
         h3{
             text-align: center;
@@ -150,8 +161,10 @@ $colors-redes: rgb(7, 7, 7);
                     height: 65vh;
                 }       
                 .mapsgoogle{
+                    width: 100%;
                     text-align: center;
                     margin: 50px;
+                    border: 0;
                 }
 /* Seccion footer */
         .bloquefooter{
