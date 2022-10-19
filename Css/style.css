@@ -38,25 +38,33 @@ body {
   border-radius: 5px;
   background-image: url(../img/Fondo-Web-3.png); }
 
-.nav-item {
-  height: 100px;
-  transition: height 10s; }
-  .nav-item div:hover {
-    height: 200px; }
-
 /* Seccion Informacion del sitio */
 h1 {
-  text-align: center;
+  animation-duration: 3s;
+  animation-name: slidein;
   margin: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   font-size: 40px;
   font-style: italic;
-  opacity: 60%; }
+  opacity: 60%;
+  text-align: center; }
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; }
+  to {
+    margin-left: 0%;
+    width: 100%; } }
 
 h2 {
-  font-size: 20px; }
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: center; }
 
 h3 {
+  margin: 50px;
   text-align: center;
   opacity: 70%; }
 
@@ -99,8 +107,12 @@ h3 {
   100% {
     opacity: 5; } }
 
+.carousel-indicators {
+  opacity: 50%; }
+
 .carousel-inner {
-  border-radius: 20px; }
+  border-radius: 40px;
+  width: 80%; }
 
 .parrafohorarios {
   font-size: 20px; }

@@ -34,32 +34,41 @@ $navbar-light-hover-color: red;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             opacity: 70%;
         }
-
         .bloquenav{
             margin: 10px;
             border-radius: 5px;
             background-image:url(../img/Fondo-Web-3.png);
         }
-        .nav-item{
-            height: 100px;
-            transition: height 10s;
-            div:hover {
-                height: 200px;
-            }
-        }
 /* Seccion Informacion del sitio */
         h1{
-            text-align: center;
+                animation-duration: 3s;
+                animation-name: slidein;
+
+                @keyframes slidein {
+                from {
+                    margin-left: 100%;
+                    width: 300%
+                }
+                to {
+                    margin-left: 0%;
+                    width: 100%;
+                }
+            }
             margin: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 80px;
             font-size: 40px;
             font-style: italic;
             opacity: 60%;
-        }
+            text-align: center;}
+
         h2{
+            margin-top: 30px;
+            margin-bottom: 30px;
             font-size: 20px;
+            text-align: center;
         }
         h3{
+            margin: 50px;
             text-align: center;
             opacity: 70%;
         }
@@ -109,8 +118,12 @@ $navbar-light-hover-color: red;
                 opacity: 5;
                 }
             }
+            .carousel-indicators{
+                opacity: 50%;
+            }
         .carousel-inner{
-            border-radius: 20px;
+            border-radius: 40px;
+            width: 80%;
             }
         .parrafohorarios{
             font-size: 20px;
