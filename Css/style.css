@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   background-size: cover;
-  background-color: #b5838d; }
+  background-color: #b5838d75; }
 
 /* Sección logo y barra navegacion */
 .breadcrumb {
@@ -36,26 +36,18 @@ body {
 .bloquenav {
   margin: 10px;
   border-radius: 5px;
-  background-image: url(../img/Fondo-Web-3.png); }
+  background-image: url(../img/Fondo-Web-3.png);
+  border-style: outset inset;
+  border-width: 5px; }
 
 /* Seccion Informacion del sitio */
 h1 {
-  animation-duration: 3s;
-  animation-name: slidein;
   margin: 20px;
   margin-bottom: 80px;
   font-size: 40px;
   font-style: italic;
   opacity: 60%;
   text-align: center; }
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%; }
-  to {
-    margin-left: 0%;
-    width: 100%; } }
 
 h2 {
   margin-top: 30px;
@@ -64,14 +56,16 @@ h2 {
   text-align: center; }
 
 h3 {
-  margin: 50px;
   text-align: center;
   opacity: 70%; }
 
 .bloquemain {
-  margin: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
   border-radius: 5px;
-  background-image: url(../img/Fondo-Web-3.png); }
+  background-image: url(../img/Fondo-Web-3.png);
+  border-style: outset inset;
+  border-width: 5px; }
 
 .titulospag {
   margin: 40px;
@@ -81,10 +75,14 @@ h3 {
   opacity: 50%; }
 
 .parrafoindex {
-  opacity: 70%;
+  opacity: 65%;
   font-size: 20px;
   font-style: italic;
-  text-align: center; }
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  margin-right: 50px;
+  margin-left: 50px; }
 
 .imginfo {
   text-align: center;
@@ -167,7 +165,9 @@ h3 {
 .bloquefooter {
   background-image: url(../img/Fondo-Web-3.png);
   margin: 10px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border-style: outset inset;
+  border-width: 5px; }
 
 .footer1 {
   text-align: center;
@@ -175,6 +175,12 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto; }
+
+.whatsp {
+  width: 40px;
+  height: 40px;
+  color: #070707;
+  margin-right: 20px; }
 
 .bi-instagram {
   width: 35px;
