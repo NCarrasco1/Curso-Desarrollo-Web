@@ -11,53 +11,52 @@ body {
   flex-direction: column;
   background-size: cover;
   background-color: #b5838d75; }
+  body .bloquenav {
+    margin: 10px;
+    border-radius: 5px;
+    background-image: url(../img/Fondo-Web-3.png);
+    border-style: outset inset;
+    border-width: 5px; }
+    body .bloquenav .imglogo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 25px;
+      opacity: 60%; }
 
 /* Sección logo y barra navegacion */
-.breadcrumb {
-  background-color: rgba(119, 91, 119, 0.24);
-  text-decoration: none; }
-
 .divlogo {
   display: flex;
   justify-content: center; }
 
-.imglogo {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  margin: 25px;
-  opacity: 60%; }
+.navbarbutton {
+  width: 20px;
+  height: 20px; }
 
 .navbar-nav {
-  font-size: 30px;
+  font-size: 15px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   opacity: 70%; }
 
-.bloquenav {
-  margin: 10px;
-  border-radius: 5px;
-  background-image: url(../img/Fondo-Web-3.png);
-  border-style: outset inset;
-  border-width: 5px; }
-
 /* Seccion Informacion del sitio */
 h1 {
-  margin: 20px;
-  margin-bottom: 80px;
-  font-size: 40px;
+  margin: 15px;
+  margin-bottom: 40px;
+  font-size: 14px;
   font-style: italic;
   opacity: 60%;
   text-align: center; }
 
 h2 {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
-  font-size: 20px;
+  font-size: 14px;
   text-align: center; }
 
 h3 {
   text-align: center;
-  opacity: 70%; }
+  opacity: 70%;
+  font-size: 14px; }
 
 .bloquemain {
   margin-right: 10px;
@@ -177,35 +176,41 @@ h3 {
   grid-template-rows: auto; }
 
 .whatsp {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   color: #070707;
-  margin-right: 20px; }
+  margin-right: 20px;
+  opacity: 70%;
+  margin-left: 20px; }
 
 .bi-instagram {
-  width: 35px;
-  height: 35px;
+  width: 20px;
+  height: 20px;
   color: #070707;
-  margin-right: 20px; }
+  margin-right: 20px;
+  opacity: 70%; }
 
 .inst {
   text-decoration: none; }
 
 .bi-facebook {
-  width: 35px;
-  height: 35px;
-  color: #070707; }
-
-.redes {
-  text-decoration: none;
-  font-size: 25px;
-  margin-top: 30px;
+  width: 20px;
+  height: 20px;
+  color: #070707;
   opacity: 70%; }
 
 .textredes {
-  text-align: center;
-  margin-top: 90px;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 10px;
+  margin-top: 30px;
+  opacity: 70%; }
+
+.imglogofooter {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 25px;
+  opacity: 60%; }
 
 /* Seccion Media */
 @media screen and (min-width: 768px) {
