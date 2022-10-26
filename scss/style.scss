@@ -64,9 +64,10 @@ body{
                     text-align: center;}
             }
             .carousel-inner{
+                margin: 30px;
                 border-radius: 40px;
-                width: 80%;
-                height: 80%;
+                width: 100%;
+                height: 350px;
                 }
             .titulospag{
                 margin: 40px;
@@ -109,8 +110,8 @@ body{
             }
             .videoinfo{
                 margin: 10px;
-                width:350px;
-                height:250px;
+                width:100%;
+                height:350px;
             }
             .formularioContacto{
                 margin: 10%;
@@ -127,8 +128,10 @@ body{
                     margin: 40px;
                     border-style: inset;}
                 .mapsgoogle{
+                    width: 120%;
+                    height: 400px;
                     align-self: center;
-                    margin: 30px;
+                    margin: 10px;
                     justify-items: center;
                     border-radius: 30px;}
                     }
@@ -141,22 +144,15 @@ body{
                 text-align: center;
                     }
         }
-
-        h3{
-            text-align: center;
-            opacity: 70%;
-            font-size: 14px;
-        }                
+        .slide{
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            }
             
-                .slide{
-                    margin-top: 10px;
-                    margin-right: 10px;
-                    margin-left: 10px;
-                }
-            
-                .slide img{
-                    height: 45vh;
-                }       
+        .slide img{
+            height: 45vh;
+            }       
 /* Seccion footer */
         .bloquefooter{
             background-image:url(../img/Fondo-Web-3.png);
@@ -178,6 +174,11 @@ body{
                     opacity: 60%;
                 }
             }
+            h3{
+                text-align: center;
+                opacity: 70%;
+                font-size: 14px;
+            }                    
             .textredes{
                 text-decoration: none;
                 font-size: 10px;
@@ -237,18 +238,40 @@ body{
                 .navbar-nav {
                     font-size: 30px;
                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                    opacity: 70%;
+                    opacity: 70%;}
+                }
+        }
+        .bloquemain{
+            h1{
+                font-size: 36px;}
+            .parrafoindex{
+                h2{
+                    font-size: 30px;}
+            }
+            .titulospag{
+                font-size: 20px;
+            }
+            .textopag{
+                font-size: 25px;
+                text-align: center;
+                margin: 50px;
+            }
+            .carousel-inner{
+                width: 100%;
+            }
+            .videoinfo{
+                margin: 10px;
+                width:100%;
+                height: 500px;
+                border-radius: 20px;
+            }
+            .divpuntosatencion{
+                .mapsgoogle{
+                    width: 100%;
+                    height: 400px;
                 }
             }
-        }
-
-        
-        .div8{
-            display: grid;
-            align-items: center;
-            justify-items: center;
-        }
-        
+        }        
         .slide{
             margin-top: 20px;
             margin-left: 50px;
@@ -256,5 +279,18 @@ body{
         }
         .slide img{
             height: 90vh;
+        }
+    }
+
+    .bloquefooter{
+        .footer1{
+            .imglogofooter{
+                width: 350px;
+                height: 350px;
+            }
+        }
+        
+        .textredes{
+            font-size: 30px;
         }
     }

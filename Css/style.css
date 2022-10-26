@@ -61,9 +61,10 @@ body {
       font-size: 14px;
       text-align: center; }
   .bloquemain .carousel-inner {
+    margin: 30px;
     border-radius: 40px;
-    width: 80%;
-    height: 80%; }
+    width: 100%;
+    height: 350px; }
   .bloquemain .titulospag {
     margin: 40px;
     font-size: 20px;
@@ -99,8 +100,8 @@ body {
     opacity: 5; } }
   .bloquemain .videoinfo {
     margin: 10px;
-    width: 350px;
-    height: 250px; }
+    width: 100%;
+    height: 350px; }
   .bloquemain .formularioContacto {
     margin: 10%;
     margin-bottom: 20%;
@@ -115,8 +116,10 @@ body {
       margin: 40px;
       border-style: inset; }
     .bloquemain .divpuntosatencion .mapsgoogle {
+      width: 120%;
+      height: 400px;
       align-self: center;
-      margin: 30px;
+      margin: 10px;
       justify-items: center;
       border-radius: 30px; }
   .bloquemain .divhorarios {
@@ -125,11 +128,6 @@ body {
   .bloquemain .divcalendario {
     margin: 100px;
     text-align: center; }
-
-h3 {
-  text-align: center;
-  opacity: 70%;
-  font-size: 14px; }
 
 .slide {
   margin-top: 10px;
@@ -158,6 +156,10 @@ h3 {
       border-radius: 50%;
       margin: 25px;
       opacity: 60%; }
+  .bloquefooter h3 {
+    text-align: center;
+    opacity: 70%;
+    font-size: 14px; }
   .bloquefooter .textredes {
     text-decoration: none;
     font-size: 10px;
@@ -209,13 +211,36 @@ h3 {
         font-size: 30px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         opacity: 70%; }
-  .div8 {
-    display: grid;
-    align-items: center;
-    justify-items: center; }
+  .bloquemain h1 {
+    font-size: 36px; }
+  .bloquemain .parrafoindex h2 {
+    font-size: 30px; }
+  .bloquemain .titulospag {
+    font-size: 20px; }
+  .bloquemain .textopag {
+    font-size: 25px;
+    text-align: center;
+    margin: 50px; }
+  .bloquemain .carousel-inner {
+    width: 100%; }
+  .bloquemain .videoinfo {
+    margin: 10px;
+    width: 100%;
+    height: 500px;
+    border-radius: 20px; }
+  .bloquemain .divpuntosatencion .mapsgoogle {
+    width: 100%;
+    height: 400px; }
   .slide {
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px; }
   .slide img {
     height: 90vh; } }
+
+.bloquefooter .footer1 .imglogofooter {
+  width: 350px;
+  height: 350px; }
+
+.bloquefooter .textredes {
+  font-size: 30px; }
