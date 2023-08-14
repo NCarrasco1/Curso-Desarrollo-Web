@@ -17,3 +17,7 @@ const edad = parseInt(prompt("Ingrese su edad"));
 const peso = parseFloat(prompt("Ingrese su peso en kg"));
 const altura = parseFloat(prompt("Ingrese su altura"));
 
+const Datos1 = new Datos(edad, peso, altura);
+
+const mensaje = `Edad: ${Datos1.edad} años\nPeso: ${Datos1.peso} kg\nAltura: ${Datos1.altura} metros`;
+alert(mensaje);
