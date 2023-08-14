@@ -5,88 +5,98 @@
   box-sizing: border-box;
 }
 
-/* Sección body*/
+/* Sección logo y barra navegacion */
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   flex-direction: column;
   background-size: cover;
-  background-color: #b5838d;
+  background-color: rgba(181, 131, 141, 0.4588235294);
 }
-
-/* Sección logo y barra navegacion */
-.breadcrumb {
-  background-color: rgba(119, 91, 119, 0.24);
-  text-decoration: none;
+body .bloquenav {
+  margin: 10px;
+  border-radius: 5px;
+  background-image: url(../img/Fondo-Web-3.png);
+  border-style: outset inset;
+  border-width: 5px;
 }
-
-.divlogo {
-  display: flex;
-  justify-content: center;
-}
-
-.imglogo {
-  width: 300px;
-  height: 300px;
+body .bloquenav .imglogo {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin: 25px;
   opacity: 60%;
 }
-
-.navbar-nav {
-  font-size: 30px;
+body .bloquenav .container {
+  font-size: 25px;
+  justify-content: end;
+}
+body .bloquenav .navbar-nav {
+  font-size: 15px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   opacity: 70%;
 }
 
-.bloquenav {
-  margin: 10px;
+/* Seccion Informacion del sitio */
+.bloquemain {
+  margin-right: 10px;
+  margin-left: 10px;
   border-radius: 5px;
   background-image: url(../img/Fondo-Web-3.png);
+  border-style: outset inset;
+  border-width: 5px;
 }
-
-/* Seccion Informacion del sitio */
-h1 {
-  text-align: center;
-  margin: 20px;
-  margin-bottom: 30px;
-  font-size: 40px;
+.bloquemain h1 {
+  margin: 15px;
+  margin-bottom: 40px;
+  font-size: 18px;
   font-style: italic;
   opacity: 60%;
-}
-
-h3 {
   text-align: center;
-  opacity: 70%;
 }
-
-.bloquemain {
-  margin: 10px;
-  border-radius: 5px;
-  background-image: url(../img/Fondo-Web-3.png);
+.bloquemain .parrafoindex {
+  opacity: 65%;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
-
-.titulospag {
+.bloquemain .parrafoindex h2 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+.bloquemain .carousel-inner {
+  margin: 30px;
+  border-radius: 40px;
+  width: 100%;
+  height: 350px;
+}
+.bloquemain .titulospag {
   margin: 40px;
+  font-size: 20px;
   text-align: center;
   font-style: italic;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   opacity: 50%;
 }
-
-.parrafoindex {
-  opacity: 70%;
-  font-size: 30px;
-  font-style: italic;
-  text-align: center;
+.bloquemain .textopag {
+  opacity: 50%;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-
-.imginfo {
+.bloquemain .imginfo {
   text-align: center;
   opacity: 75%;
 }
-
-.acido {
+.bloquemain .imginfo .acido {
   width: 300px;
   background-size: cover;
   background-position: center;
@@ -100,7 +110,6 @@ h3 {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-
 @-webkit-keyframes aparecer {
   0% {
     opacity: 0;
@@ -109,7 +118,6 @@ h3 {
     opacity: 5;
   }
 }
-
 @keyframes aparecer {
   0% {
     opacity: 0;
@@ -118,51 +126,42 @@ h3 {
     opacity: 5;
   }
 }
-.carousel-inner {
-  border-radius: 20px;
+.bloquemain .videoinfo {
+  margin: 10px;
+  width: 100%;
+  height: 350px;
 }
-
-.parrafohorarios {
-  font-size: 20px;
-}
-
-.formularioContacto {
+.bloquemain .formularioContacto {
   margin: 10%;
   margin-bottom: 20%;
   text-align: center;
   font-style: italic;
   font-weight: bold;
 }
-
-.divpuntosatencion {
+.bloquemain .divpuntosatencion {
   text-align: center;
   margin: 100px;
   text-decoration: underline;
 }
-
-.imgmaps {
+.bloquemain .divpuntosatencion .imgmaps {
   margin: 40px;
   border-style: inset;
 }
-
-.divcalendario {
-  margin: 100px;
-  text-align: center;
+.bloquemain .divpuntosatencion .mapsgoogle {
+  width: 120%;
+  height: 400px;
+  align-self: center;
+  margin: 10px;
+  justify-items: center;
+  border-radius: 30px;
 }
-
-.divhorarios {
+.bloquemain .divhorarios {
   text-align: center;
   margin-top: 50px;
 }
-
-.videoinfo {
-  margin: 20px;
-  height: 85vh;
-}
-
-.container {
-  font-size: 25px;
-  justify-content: end;
+.bloquemain .divcalendario {
+  margin: 100px;
+  text-align: center;
 }
 
 .slide {
@@ -172,12 +171,7 @@ h3 {
 }
 
 .slide img {
-  height: 65vh;
-}
-
-.mapsgoogle {
-  text-align: center;
-  margin: 50px;
+  height: 75vh;
 }
 
 /* Seccion footer */
@@ -185,69 +179,107 @@ h3 {
   background-image: url(../img/Fondo-Web-3.png);
   margin: 10px;
   border-radius: 5px;
+  border-style: outset inset;
+  border-width: 5px;
 }
-
-.footer1 {
+.bloquefooter .footer1 {
   text-align: center;
   justify-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
 }
-
-.bi-instagram {
-  width: 35px;
-  height: 35px;
-  color: rgb(7, 7, 7);
-  margin-right: 20px;
+.bloquefooter .footer1 .imglogofooter {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 25px;
+  opacity: 60%;
 }
-
-.inst {
+.bloquefooter h3 {
+  text-align: center;
+  opacity: 70%;
+  font-size: 14px;
+}
+.bloquefooter .textredes {
   text-decoration: none;
-}
-
-.bi-facebook {
-  width: 35px;
-  height: 35px;
-  color: rgb(7, 7, 7);
-}
-
-.redes {
-  text-decoration: none;
-  font-size: 25px;
+  font-size: 10px;
   margin-top: 30px;
   opacity: 70%;
 }
-
-.textredes {
-  text-align: center;
-  margin-top: 90px;
-  text-decoration: none;
+.bloquefooter .whatsp {
+  width: 20px;
+  height: 20px;
+  color: rgb(7, 7, 7);
+  margin-right: 20px;
+  opacity: 70%;
+  margin-left: 20px;
 }
 
 /* Seccion Media */
 @media screen and (min-width: 768px) {
-  .div8 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    align-items: center;
-    justify-items: center;
-  }
   .slide {
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 20px;
   }
   .slide img {
-    height: 80vh;
+    height: 95vh;
   }
 }
 @media screen and (min-width: 1024px) {
-  .div8 {
-    display: grid;
-    align-items: center;
-    justify-items: center;
+  body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-color: rgba(181, 131, 141, 0.4588235294);
+  }
+  body .bloquenav {
+    margin: 10px;
+    border-radius: 5px;
+    background-image: url(../img/Fondo-Web-3.png);
+    border-style: outset inset;
+    border-width: 5px;
+  }
+  body .bloquenav .imglogo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 25px;
+    opacity: 60%;
+  }
+  body .bloquenav .navbar-nav {
+    font-size: 30px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    opacity: 70%;
+  }
+  .bloquemain h1 {
+    font-size: 36px;
+  }
+  .bloquemain .parrafoindex h2 {
+    font-size: 30px;
+  }
+  .bloquemain .titulospag {
+    font-size: 20px;
+  }
+  .bloquemain .textopag {
+    font-size: 25px;
+    text-align: center;
+    margin: 50px;
+  }
+  .bloquemain .carousel-inner {
+    width: 100%;
+  }
+  .bloquemain .videoinfo {
+    margin: 10px;
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+  }
+  .bloquemain .divpuntosatencion .mapsgoogle {
+    width: 100%;
+    height: 400px;
   }
   .slide {
     margin-top: 20px;
@@ -256,5 +288,19 @@ h3 {
   }
   .slide img {
     height: 90vh;
+  }
+  .bloquefooter .footer1 .imglogofooter {
+    width: 350px;
+    height: 350px;
+  }
+  .bloquefooter .textredes {
+    font-size: 30px;
+  }
+  .bloquefooter .divfooter1 {
+    margin-top: 60px;
+  }
+  .bloquefooter .whatsp {
+    width: 40px;
+    height: 40px;
   }
 }/*# sourceMappingURL=style.css.map */
