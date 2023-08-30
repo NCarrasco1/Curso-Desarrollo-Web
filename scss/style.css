@@ -103,20 +103,9 @@ body .bloquenav .navbar-nav {
   height: 300px;
   margin: 20px;
   border-style: inset;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-name: aparecer;
-          animation-name: aparecer;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-@-webkit-keyframes aparecer {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 5;
-  }
+  animation-duration: 8s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
 }
 @keyframes aparecer {
   0% {
