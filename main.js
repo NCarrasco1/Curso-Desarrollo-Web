@@ -1,61 +1,72 @@
-alert("!Bienvenido, usted ha ingresado a la pagina de la Dra. Palazzo!")
-alert("Le vamos a solicitar unos datos para poder procesar su consulta")
+//3er preentrega 
 
-function saludarPaciente () {
-    let nombre = prompt("Por favor, ingrese su nombre");
-    alert (`El nombre ingresado es ${nombre}`); 
-}
-saludarPaciente(); 
+  let usuario; 
+  let usuarioStorage = sessionStorage.getItem("usuario"); 
 
-function Datos (edad, peso, altura) {
-    this.edad = edad;                       
-    this.peso = peso;
-    this.altura = altura;
-} 
+  if (usuarioStorage) {
+    usuario = usuarioStorage;
+    alert(`Bienvenido/a nuevamente ${usuario}`);
+  } else {
+    usuario = prompt("Ingrese el usuario");
+    sessionStorage.setItem("usuario", usuario); 
+    alert(`Bienvenido/a por primera vez ${usuario}`); 
+  }; 
 
-const edad = parseInt(prompt("Ingrese su edad"));
-const peso = parseFloat(prompt("Ingrese su peso en kg"));
-const altura = parseFloat(prompt("Ingrese su altura"));
 
-const Datos1 = new Datos(edad, peso, altura);
 
-const mensaje = `Edad: ${Datos1.edad} años\nPeso: ${Datos1.peso} kg\nAltura: ${Datos1.altura} metros`;
-alert(mensaje);
+    const productos = [
+    {
+      id: 1, 
+      nombre: "Crema Antiarrugas",
+      marca: "Eucerin",
+      precio: 15000 
+    },  
+    {
+      id: 2, 
+      nombre: "Crema AntiEdad" ,
+      marca: "Dermaglos" ,precio: 7500 
+    },  
+    {  
+      id: 3,
+      nombre: "Acido Hialuronico",
+      marca: "ART FILLER",
+      precio: 30000 
+    },  
+    {
+      id: 4,
+      nombre: "Botox",
+      marca: "Dysport",
+      precio: 100000 
+    },  
+  ];
 
-const patologias = [
-    {id: 1, nombre: "Acne" },
-    {id: 2, nombre: "Psoriasis"},
-    {id: 3, nombre: "Urticaria"},
-    {id: 4, nombre: "Sequedad extrema"},
-    {id: 5, nombre: "Lunares"},
-    {id: 6, nombre: "Alopecia"},
-    {id: 7, nombre: "Foliculitis"},
-];
+  localStorage.setItem("carrito", JSON.stringify(productos));
 
-let nombre = prompt("Ingrese el nombre de la patologia a consultar").toLowerCase();
+  const agregar = (id) => {
+    let producto = productos.find((item) => item.id === id);
+    console.log(producto);
+  };
 
-let patologia = patologias.find(item => item.nombre.toLowerCase() === nombre);
-
-if (patologia) {
-    let mensaje = `
-    ID: ${patologia.id}
-    Nombre: ${patologia.nombre}
+  productos.forEach((item) => {
+    let div = document.createElement("div");
+    div.className = "bloquemain"; 
+    div.innerHTML = `
+      <h2>ID: ${item.id}</h2>
+      <p>Nombre: ${item.nombre}</p>
+      <p>Marca: ${item.marca}</p>
+      <p>Precio: ${item.precio}</p>
+      <button id="boton${item.id}">Agregar</button> 
     `;
-    alert(mensaje);
-} else {
-    alert("La patologia mencionada no se encuentra en la lista");
-} 
+    document.body.append(div);
 
-alert ("Excelente, su consulta ya fue procesada!");
-alert("Por favor ingrese su correo para enviarle el dia de su turno");
+    let boton = document.getElementById(`boton${item.id}`);
+    boton.addEventListener("click", () => agregar(item.id)); 
+  }); 
 
-function ingresarCorreo() {
-    let correo = prompt("Ingrese su correo electrónico");
-    return correo;
-}
+  
 
-let correo = ingresarCorreo();
 
-alert(`Correo electrónico ingresado: ${correo}`);
-alert("Se le enviara al correo ingresado el dia y la hora de su turno. Muchas gracias.")
+
+ 
+
 
