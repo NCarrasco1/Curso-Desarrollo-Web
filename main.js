@@ -1,6 +1,12 @@
 //3er preentrega 
 const contProductos = document.querySelector(`#cont-productos`);
 console.log(productos);
+let carrito = []; 
+
+const carritoGuardado = localStorage.getItem("carrito");
+if (carritoGuardado) {
+  carrito = JSON.parse(carritoGuardado);
+}
 
 const mostrarProductos = (d) => {
   d.forEach(producto => {
@@ -12,12 +18,12 @@ const mostrarProductos = (d) => {
           <h3 class = "producto-nombre">${producto?.nombre}</h3>
           <h3 class = "producto-marca">${producto?.marca}</h3>
           <h3 class = "producto-precio">$${producto?.precio}</h3>
-          <button id = '${producto.id}' class = "btn-compra"> COMPRAR</button>
+          <button id = '${producto.id}' class = "btn-compra">COMPRAR</button>
         </div> 
         `; 
     contProductos.appendChild(cardProducto); 
   })
-  const btnComprar  = document.querySelectorAll('.btn-comprar'); 
+  const btnComprar  = document.querySelectorAll('.btn-compra'); 
   btnComprar.forEach (el => {
       el.addEventListener('click', (e) => {
           agregarAlCarrito(e.target.id)
@@ -28,7 +34,7 @@ const mostrarProductos = (d) => {
 const mostrarCarrito = () => {
   console.log("Carrito de compras:");
   carrito.forEach(producto => {
-    console.log(`- ${producto.nombre}`);
+    console.log(`- ID: ${producto.id}, Nombre: ${producto.nombre}, Marca: ${producto.marca}, Precio: $${producto.precio}`);
   });
 }
 
@@ -39,6 +45,8 @@ function agregarAlCarrito(id){
   
   carrito.push(prodEncontrado);
   mostrarCarrito(); 
+
+  localStorage.setItem("carrito", JSON.stringify(carrito)); 
 }; 
 
 
