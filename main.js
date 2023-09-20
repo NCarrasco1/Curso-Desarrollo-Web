@@ -6,7 +6,21 @@ let carrito = [];
 const carritoGuardado = localStorage.getItem("carrito");
 if (carritoGuardado) {
   carrito = JSON.parse(carritoGuardado);
-}
+};
+
+const cargarProductos = async () => {
+  try {
+    const response = await fetch('/data.json'); 
+    if (!response.ok) {
+      throw new Error('Error al cargar los productos');
+    }
+    const productos = await response.json();
+    mostrarProductos(productos);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
 
 const mostrarProductos = (d) => {
   d.forEach(producto => {
@@ -27,6 +41,11 @@ const mostrarProductos = (d) => {
   btnComprar.forEach (el => {
       el.addEventListener('click', (e) => {
           agregarAlCarrito(e.target.id)
+          Swal.fire({
+            title: 'Genial!',
+            text: 'Haz agregado este articulo al carrito',
+            icon: 'success',
+            })   
       });  
   })
 }
@@ -38,7 +57,8 @@ const mostrarCarrito = () => {
   });
 }
 
-mostrarProductos(productos); 
+cargarProductos();
+// mostrarProductos(productos); 
 
 function agregarAlCarrito(id){
   let prodEncontrado = productos.find (prod => prod.id === parseInt(id));
