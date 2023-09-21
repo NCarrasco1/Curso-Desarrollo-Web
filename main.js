@@ -1,7 +1,6 @@
-//3er preentrega 
 const contProductos = document.querySelector(`#cont-productos`);
-console.log(productos);
 let carrito = []; 
+let productos = []; 
 
 const carritoGuardado = localStorage.getItem("carrito");
 if (carritoGuardado) {
@@ -14,7 +13,7 @@ const cargarProductos = async () => {
     if (!response.ok) {
       throw new Error('Error al cargar los productos');
     }
-    const productos = await response.json();
+    productos = await response.json();
     mostrarProductos(productos);
   } catch (error) {
     console.error('Error:', error);
@@ -27,12 +26,12 @@ const mostrarProductos = (d) => {
     const cardProducto = document.createElement(`article`);
     cardProducto.setAttribute(`id`, `tarjeta-producto`); 
     cardProducto.innerHTML =`
-        <img class = "prod-img" src ="${producto?.img}" alt="${producto?.nombre}" style="width: 150px"
+        <img class = "prod-img" src ="${producto?.img}" alt="${producto?.nombre}" style="width: 200px"
         <div class = "producto-description">
           <h3 class = "producto-nombre">${producto?.nombre}</h3>
           <h3 class = "producto-marca">${producto?.marca}</h3>
           <h3 class = "producto-precio">$${producto?.precio}</h3>
-          <button id = '${producto.id}' class = "btn-compra">COMPRAR</button>
+          <button id = '${producto.id}' class = "btn-compra">AGREGAR AL CARRITO</button>
         </div> 
         `; 
     contProductos.appendChild(cardProducto); 
@@ -41,24 +40,34 @@ const mostrarProductos = (d) => {
   btnComprar.forEach (el => {
       el.addEventListener('click', (e) => {
           agregarAlCarrito(e.target.id)
-          Swal.fire({
-            title: 'Genial!',
-            text: 'Haz agregado este articulo al carrito',
-            icon: 'success',
-            })   
-      });  
-  })
-}
+const productoAgregado = productos.find(prod => prod.id === parseInt(e.target.id));
+      Swal.fire({
+        title: 'Producto agregado al carrito',
+        html: `
+          <p>Nombre: ${productoAgregado.nombre}</p>
+          <p>Marca: ${productoAgregado.marca}</p>
+          <p>Precio: $${productoAgregado.precio}</p>
+        `,
+        icon: 'success',
+      });
+    });
+  });
+};
 
 const mostrarCarrito = () => {
   console.log("Carrito de compras:");
   carrito.forEach(producto => {
-    console.log(`- ID: ${producto.id}, Nombre: ${producto.nombre}, Marca: ${producto.marca}, Precio: $${producto.precio}`);
+    console.log(` 
+    ID: ${producto.id}, 
+    Nombre: ${producto.nombre}, 
+    Marca: ${producto.marca}, 
+    Precio: $${producto.precio}
+    `);
   });
-}
+}; 
 
 cargarProductos();
-// mostrarProductos(productos); 
+ 
 
 function agregarAlCarrito(id){
   let prodEncontrado = productos.find (prod => prod.id === parseInt(id));
@@ -68,6 +77,36 @@ function agregarAlCarrito(id){
 
   localStorage.setItem("carrito", JSON.stringify(carrito)); 
 }; 
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+
+searchButton.addEventListener('click', () => {
+  const searchTerm = searchInput.value.toLowerCase(); 
+
+  const productosFiltrados = productos.filter(producto => {
+    const nombreProducto = producto.nombre.toLowerCase();
+    return nombreProducto.includes(searchTerm);
+  });
+  
+  if (productosFiltrados.length > 0) {
+    const resultados = productosFiltrados.map(producto => producto.nombre).join('<br>');
+    Swal.fire({
+      title: 'Resultados de la búsqueda',
+      html: resultados,
+      icon: 'info',
+    });
+
+    mostrarProductos(productosFiltrados);
+  } else {
+    Swal.fire({
+      title: 'No se encontraron resultados',
+      text: 'No hay productos que coincidan con la búsqueda.',
+      icon: 'error',
+    });
+  }
+});
+
+
 
 
 

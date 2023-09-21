@@ -241,3 +241,37 @@ body {
   .bloquefooter .whatsp {
     width: 40px;
     height: 40px; } }
+
+
+    .productos-container {
+      display: flex;
+      flex-direction: column; /* Muestra los productos en una columna */
+      align-items: center; /* Centra los productos horizontalmente */
+      gap: 20px; /* Espacio entre los productos */
+      max-width: 1200px; /* Limita el ancho del contenedor para que no se extienda demasiado en pantallas anchas */
+      margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
+    }
+    
+    /* Añade estilos para cada producto si es necesario */
+    
+    
+
+    #search-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    #search-input {
+      width: 200px;
+      padding: 5px;
+      margin-right: 10px;
+    }
+    
+    #search-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
